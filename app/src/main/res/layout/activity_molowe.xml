@@ -11,23 +11,22 @@
         android:orientation="vertical">
 
     <TextView
-            android:text="Obliczanie stężenia procentowego:"
             android:layout_marginBottom="10dp"
             android:textSize="20sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" android:text="Obliczanie stężenia molowego"/>
 
     <EditText android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:hint="Masa substancji rozpuszczanej"
+              android:hint="Liczba moli substancji"
               android:inputType="number"
-              android:id="@+id/masaSubText"/>
+              android:id="@+id/liczbaMoliText"/>
 
     <EditText android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:hint="Masa rozpuszczalnika"
+              android:hint="Objętość roztworu"
               android:inputType="number"
-              android:id="@+id/masaRozpText"/>
+              android:id="@+id/objetoscRozText"/>
     <Button
             android:text="OBLICZ"
             android:layout_width="match_parent"

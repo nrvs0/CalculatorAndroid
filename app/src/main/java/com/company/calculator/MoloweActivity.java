@@ -11,32 +11,32 @@ import android.widget.Toast;
 public class MoloweActivity extends AppCompatActivity {
     private TextView wynik;
     private Button obliczButton;
-    private EditText masaSubRozpText;
-    private EditText masaRozpText;
+    private EditText liczbaMoliText;
+    private EditText objetoscRozText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_molowe);
 
-        masaSubRozpText = findViewById(R.id.masaSubText);
-        masaRozpText = findViewById(R.id.masaRozpText);
+        liczbaMoliText = findViewById(R.id.liczbaMoliText);
+        objetoscRozText = findViewById(R.id.objetoscRozText);
         obliczButton = findViewById(R.id.obliczButton);
         wynik = findViewById(R.id.wynikView);
 
         obliczButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (masaSubRozpText.getText().toString().equals("") || masaRozpText.getText().toString().equals("")) {
+                if (liczbaMoliText.getText().toString().equals("") || objetoscRozText.getText().toString().equals("")) {
                     Toast.makeText(MoloweActivity.this, "Wprowadź dane", Toast.LENGTH_SHORT).show();
                 }else {
 
-                    double number1 = Double.parseDouble(masaSubRozpText.getText().toString());
-                    double number2 = Double.parseDouble(masaRozpText.getText().toString());
+                    double number1 = Double.parseDouble(liczbaMoliText.getText().toString());
+                    double number2 = Double.parseDouble(objetoscRozText.getText().toString());
 
-                    double wyswietlanyWynik = (number1/(number1 + number2))*100;
+                    double wyswietlanyWynik = number1/number2;
 
-                    wynik.setText(String.valueOf(wyswietlanyWynik) + '%');
+                    wynik.setText(String.valueOf(wyswietlanyWynik) + " mol/dm^3");
                 }
             }
         });

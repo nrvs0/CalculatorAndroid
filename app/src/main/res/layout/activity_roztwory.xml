@@ -19,27 +19,21 @@
 
     <EditText android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:hint="Masa substancji 1"
+              android:hint="Objętość początkowa [dm^3]"
               android:inputType="number"
-              android:id="@+id/masaSub1Text"/>
+              android:id="@+id/objetoscPoczatkowaText"/>
 
     <EditText android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:hint="Stężenie molowe substancji 1"
+              android:hint="Stężenie początkowe [mol/dm^3]"
               android:inputType="number"
-              android:id="@+id/stezSub1Text"/>
+              android:id="@+id/stezPoczotkoweText"/>
 
     <EditText android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:hint="Masa substancji 2"
+              android:hint="Objętość końcowa [dm^3]"
               android:inputType="number"
-              android:id="@+id/masaSub2Text"/>
-
-    <EditText android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:hint="Stężenie molowe substancji 2"
-              android:inputType="number"
-              android:id="@+id/stezSub1Text"/>
+              android:id="@+id/objetoscKoncowaText"/>
 
     <Button
             android:text="OBLICZ"

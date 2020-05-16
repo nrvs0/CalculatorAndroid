@@ -11,32 +11,37 @@ import android.widget.Toast;
 public class RoztworyActivity extends AppCompatActivity {
     private TextView wynik;
     private Button obliczButton;
-    private EditText masaSubRozpText;
-    private EditText masaRozpText;
+    private EditText objetoscPoczatkowaText;
+    private EditText stezPoczotkoweText;
+    private EditText objetoscKoncowaText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roztwory);
 
-        masaSubRozpText = findViewById(R.id.masaSubText);
-        masaRozpText = findViewById(R.id.masaRozpText);
+        objetoscPoczatkowaText = findViewById(R.id.objetoscPoczatkowaText);
+        stezPoczotkoweText = findViewById(R.id.stezPoczotkoweText);
+        objetoscKoncowaText = findViewById(R.id.objetoscKoncowaText);
         obliczButton = findViewById(R.id.obliczButton);
         wynik = findViewById(R.id.wynikView);
 
         obliczButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (masaSubRozpText.getText().toString().equals("") || masaRozpText.getText().toString().equals("")) {
+                if (objetoscPoczatkowaText.getText().toString().equals("") || stezPoczotkoweText.getText().toString().equals("") ||
+                        objetoscKoncowaText.getText().toString().equals("")) {
                     Toast.makeText(RoztworyActivity.this, "Wprowadź dane", Toast.LENGTH_SHORT).show();
-                }else {
+                } else {
 
-                    double number1 = Double.parseDouble(masaSubRozpText.getText().toString());
-                    double number2 = Double.parseDouble(masaRozpText.getText().toString());
+                    double number1 = Double.parseDouble(objetoscPoczatkowaText.getText().toString());
+                    double number2 = Double.parseDouble(stezPoczotkoweText.getText().toString());
+                    double number3 = Double.parseDouble(objetoscKoncowaText.getText().toString());
 
-                    double wyswietlanyWynik = (number1/(number1 + number2))*100;
+                    double wyswietlanyWynik = number2*number1/number3;
 
-                    wynik.setText(String.valueOf(wyswietlanyWynik) + '%');
+                    wynik.setText(String.valueOf(wyswietlanyWynik) + " mol/dm^3");
                 }
             }
         });

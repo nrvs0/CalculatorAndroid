@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+    <TextView
+            android:text="Obliczanie stężenia procentowego:"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Masa substancji rozpuszczanej"
+              android:inputType="number"
+              android:id="@+id/masaSubText"/>
+
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Masa rozpuszczalnika"
+              android:inputType="number"
+              android:id="@+id/masaRozpText"/>
+    <Button
+            android:text="OBLICZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/obliczButton"
+    />
+    <TextView
+            android:text="WYNIK"
+            android:layout_marginTop="30dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:text=""
+            android:layout_marginTop="30dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wynikView"/>
+
+</LinearLayout>

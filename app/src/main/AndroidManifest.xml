@@ -12,17 +12,16 @@
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:configChanges="orientation|screenSize">
         </activity>
-        <activity android:name=".ProcentoweActivity">
+        <activity android:name=".ProcentoweActivity" android:configChanges="orientation|screenSize">
         </activity>
-        <activity android:name=".MoloweActivity">
+        <activity android:name=".MoloweActivity" android:configChanges="orientation|screenSize">
         </activity>
-        <activity android:name=".RoztworyActivity">
+        <activity android:name=".RoztworyActivity" android:configChanges="orientation|screenSize">
         </activity>
     </application>
 

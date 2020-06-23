@@ -41,7 +41,7 @@ public class RoztworyActivity extends AppCompatActivity {
 
                     double wyswietlanyWynik = number2*number1/number3;
 
-                    wynik.setText(String.valueOf(wyswietlanyWynik) + " mol/dm^3");
+                    wynik.setText(String.format("%.2f%n", wyswietlanyWynik) + " mol/dm^3");
                 }
             }
         });

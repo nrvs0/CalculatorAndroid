@@ -36,7 +36,7 @@ public class ProcentoweActivity extends AppCompatActivity {
 
                     double wyswietlanyWynik = (number1/(number1 + number2))*100;
 
-                    wynik.setText(String.valueOf(wyswietlanyWynik) + '%');
+                    wynik.setText(String.format("%.2f%n", wyswietlanyWynik) + '%');
                 }
             }
         });

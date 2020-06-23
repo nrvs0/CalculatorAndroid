@@ -36,7 +36,7 @@ public class MoloweActivity extends AppCompatActivity {
 
                     double wyswietlanyWynik = number1/number2;
 
-                    wynik.setText(String.valueOf(wyswietlanyWynik) + " mol/dm^3");
+                    wynik.setText(String.format("%.2f%n", wyswietlanyWynik) + " mol/dm^3");
                 }
             }
         });
